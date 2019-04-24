@@ -1,0 +1,26 @@
+.footer-tabbar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    display: flex;
+    font-size: 14px;
+    z-index: 911;
+    background: #1E9FFF;
+}
+
+.tabbar_item {
+    color: white;
+    display: block;
+    flex: 1;
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.tabbar_item.tab_on{
+    color: #1E9FFF;
+}

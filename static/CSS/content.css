@@ -1,0 +1,112 @@
+/*base1中content文件*/
+.content {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    padding-top: 48px;
+    z-index: 16;
+}
+
+.notice-panel {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #fff2ee;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.mg15 {
+    margin: 15px;
+}
+
+.panel-title1 {
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.notice_content {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* user中css文件*/
+.user-info-block {
+    background: #0086ea;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.user-info-block .name {
+  line-height: 24px;
+}
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.user-info-block .det {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #0069b7;
+  margin-top: 15px;
+}
+
+.user-info-block .det .amount {
+  flex: 1;
+  border-right: 1px solid #e5e5e5;
+}
+
+
+.user-info-block .det .amount span {
+  display: block;
+}
+
+.user-info-block .det .amount span.field {
+  font-size: 14px;
+}
+.user-info-block .det .amount span.value {
+  font-size: 16px;
+}
+.user-info-block .det .notice {
+  flex: 2;
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+/*6个功能区*/
+.nav-list-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nav-list-flex .nav-item {
+    display: block;
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    padding: 10px 0;
+}
+
+.nav-list-flex .nav-item .nav-txt {
+    display: block;
+    font-size: 14px;
+}
+
+.p15 {
+    padding-top: 66px;
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0;
+}
+
+
+

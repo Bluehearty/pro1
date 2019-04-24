@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'CSS/header.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/content.css' %}">
+</head>
+<body>
+    <!-- 主体文件 -->
+    <header class="top-header">
+        <h1>分享猿</h1>
+    </header>
+
+    {% block  content %}
+    {% endblock %}
+
+    <!-- 底部菜单 -->
+    <div class="footer-tabbar">
+        <a href="/index/" class="tabbar_item">
+            <p class="weui-tabbar__label">任务大厅</p></a>
+        <a href="/applied/" class="tabbar_item">
+            <p class="tabbar_label">已申请任务</p></a>
+        <a href="/user/" class="tabbar_item">
+            <p class="tabbar_label">会员中心</p></a>
+    </div>
+</body>
+</html>

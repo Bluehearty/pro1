@@ -1,0 +1,31 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+    <div class="content">
+
+        {% if message %}
+            {% if state == 0 %}
+                <div class="alert alert-warning">{{ message }}</div>
+            {% else %}
+                <div class="alert alert-success">{{ message }}</div>
+            {% endif %}
+        {% endif %}
+
+
+        <form action="/user/setpassword" method="post">
+            <div>
+                <label>密码</label>
+                <input name="pwd" type="password">
+            </div>
+            <div>
+                <label>新密码</label>
+                <input name="new_pwd" type="password">
+            </div>
+            <div>
+                <label>再次输入新密码</label>
+                <input name="pwd_confirm" type="password">
+            </div>
+            <button type="submit" class="btn btn-primary">修改密码</button>
+        </form>
+    </div>
+{% endblock %}
