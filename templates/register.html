@@ -1,70 +1,53 @@
 {% extends 'base2.html' %}
-
+{% load staticfiles %}
 {% block title %}注册{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static '/css/froms.css' %}">
+{% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="col-md-4 col-md-offset-4">
-            <form class="form-register" action="/register/" method="post">
+            <form class="form-login" action="" method="post">
 
                 {% if message %}
                     <div class="alert alert-warning">{{ message }}</div>
                 {% endif %}
 
-            <h2 class="text-center">欢迎注册</h2>
+                <h2 class="text-center">欢迎注册</h2>
 
-            <div class="form-group">
-                {{ register_form.mobile.label_tag }}
-                {{ register_form.mobile }}
-            </div>
+                <label for="id_mobile">手机号码</label>
+                <input class="form-control" type="tel" name="mobile" placeholder="请输入会员手机号" id="id_mobile">
 
-            <div class="form-group">
-                {{ register_form.password1.label_tag }}
-                {{ register_form.password1 }}
-            </div>
+                <label class="id_password1">密码</label>
+                <input class="form-control" type="password" name="password1" id="id_password1" placeholder="请输入密码">
 
-            <div class="form-group">
-                {{ register_form.password2.label_tag }}
-                {{ register_form.password2 }}
-            </div>
+                <label class="id_password2">确认密码</label>
+                <input class="form-control" type="password" name="password2" id="id_password2" placeholder="请再次输入密码">
 
-            <div class="form-group">
-                {{ register_form.email.label_tag }}
-                {{ register_form.email }}
-            </div>
+                <label class="id_email">邮箱地址</label>
+                <input class="form-control" type="text" name="email" id="id_email" placeholder="请输入您的邮箱号">
 
-            <div class="form-group">
-                {{ register_form.name.label_tag }}
-                {{ register_form.name }}
-            </div>
+                <label class="id_name">真实姓名</label>
+                <input class="form-control" type="text" name="name" id="id_name" placeholder="请您的真实姓名">
 
-            <div class="form-group">
-                {{ register_form.area.label_tag }}
-                {{ register_form.area }}
-            </div>
+                <label class="id_area">所在地区</label>
+                <input class="form-control" type="text" name="area" id="id_area" placeholder="请输入您所在的省、市">
 
-            <div class="form-group">
-                {{ register_form.address.label_tag }}
-                {{ register_form.address }}
-            </div>
+                <label class="id_address">详细地址</label>
+                <input class="form-control" type="text" name="address" id="id_address" placeholder="请输入详细地址">
 
-            <div class="form-group">
-                {{ register_form.qq.label_tag }}
-                {{ register_form.qq }}
-            </div>
+                <label class="id_qq">QQ号</label>
+                <input class="form-control" type="text" name="qq" id="id_qq" placeholder="请输入QQ号码">
 
-            <div class="form-group">
-                {{ register_form.wx.label_tag }}
-                {{ register_form.wx }}
-            </div>
+                <label class="id_wx">微信号</label>
+                <input class="form-control" type="text" name="wx" id="id_wx" placeholder="请输入微信号码">
 
-            <div class="form-group">
-                {{ register_form.tb.label_tag }}
-                {{ register_form.tb }}
-            </div>
+                <label class="id_tb">旺旺号</label>
+                <input class="form-control" type="text" name="tb" id="id_tb" placeholder="请输入淘宝会员名">
 
-            <button type="reset" class="btn btn-default pull-left">重置</button>
-            <button type="submit" class="btn btn-primary pull-right">提交</button>
+                <button type="submit" class="btn btn-primary">提交</button>
 
             </form>
         </div>
