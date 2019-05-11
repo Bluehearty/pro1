@@ -1,16 +1,17 @@
-.footer-tabbar{
+.footer-tabbar {
     position: fixed;
     bottom: 0;
     width: 100%;
-    max-width: none;
+    max-width: 750px;
     display: flex;
+    box-shadow: 0 -5px 10px #d9d9d9;
     font-size: 14px;
     z-index: 911;
-    background: #1E9FFF;
+    background: #ffffff;
 }
 
 .tabbar_item {
-    color: white;
+    color: #7E8C8D;
     display: block;
     flex: 1;
     -ms-flex: 1;

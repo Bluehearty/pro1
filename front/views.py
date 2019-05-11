@@ -34,9 +34,11 @@ def login(request):
         login_form = UserForm(request.POST)
         message = "请检查填写的内容！"
         if login_form.is_valid():
+            mobile = login_form.cleaned_data['mobile']
+            password = login_form.cleaned_data['password']
             try:
                 user = models.User.objects.get(mobile=login_form.cleaned_data['mobile'])
-                if user.password == user.password:
+                if user.password == password:
                     request.session['is_login'] = True
                     request.session['user_mobile'] = user.mobile
                     request.session['user_name'] = user.name
@@ -65,11 +67,9 @@ def index(request):
 
 def register(request):
     if request.method == "POST":
-        print('1')
         register_form = RegisterForm(request.POST)
         message = '请检查填写的内容！'
         if register_form.is_valid(): #验证
-            print('12')
             mobile = register_form.cleaned_data['mobile']
             password1 = register_form.cleaned_data['password1']
             password2 = register_form.cleaned_data['password2']
@@ -95,7 +95,6 @@ def register(request):
                     message = '邮箱已被注册，请更换邮箱地址！'
                     #return redirect('/register/')
                     return render(request, 'register.html', locals())
-                print('3')
                 # 当一切都OK时，创建新用户
                 new_user = models.User.objects.create()
                 new_user.mobile = mobile
