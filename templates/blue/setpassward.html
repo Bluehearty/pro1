@@ -1,4 +1,4 @@
-{% extends 'base1.html' %}
+{% extends 'blue/base1.html' %}
 
 {% block content %}
     <div class="content">
@@ -12,7 +12,7 @@
         {% endif %}
 
 
-        <form action="/user/setpassword" method="post">
+        <form action="blue/user/setpassword" method="post">
             <div>
                 <label>密码</label>
                 <input name="pwd" type="password">

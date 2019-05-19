@@ -3,12 +3,11 @@ from django.http import HttpResponse
 from . import models
 from .forms import UserForm,RegisterForm,UserInfoForm
 
-mobileMMMMMMM = '123456789'
 
 def login(request):
     #如果is_login是True则不需要登陆
     if request.session.get('is_login', None):
-        return redirect('index')
+        return redirect('blue/index/')
 
     if request.method == 'POST':
         '''mobile= request.POST.get('mobile',None)
@@ -43,22 +42,22 @@ def login(request):
                     request.session['user_mobile'] = user.mobile
                     request.session['user_name'] = user.name
                     request.session['password'] = user.password
-                    return redirect('/index/')
+                    return redirect('blue/index/')
                 else:
                     message = "密码不正确！"
             except:
                 message = "用户不存在！"
-        return render(request, 'login.html', locals())
+        return render(request, 'blue/login.html', locals())
     elif request.method =='GET':
         login_form = UserForm()
-        return render(request, 'login.html', locals())
+        return render(request, 'blue/login.html', locals())
     else:
         return HttpResponse('method既不是POST也不是GET!')
 
 def index(request):
     if 'is_login' in request.session:
         if request.session['is_login']:
-            return render(request,'index.html')
+            return render(request,'blue/index.html')
         else:
             return redirect('login')
     else:
@@ -83,18 +82,18 @@ def register(request):
             if password1 != password2: #判断两次密码是否相同
                 message = '两次输入的密码不相同！'
                 #return redirect('/register/') 返回/register/register/
-                return render(request, 'register.html', locals())
+                return render(request, 'blue/register.html', locals())
             else:
                 same_name_user = models.User.objects.filter(mobile=mobile)
                 if same_name_user:
                     message = '手机号已存在！'
                     #return redirect('/register/')
-                    return render(request, 'register.html', locals())
+                    return render(request, 'blue/register.html', locals())
                 same_email_user = models.User.objects.filter(email=email)
                 if same_name_user: #邮箱唯一
                     message = '邮箱已被注册，请更换邮箱地址！'
                     #return redirect('/register/')
-                    return render(request, 'register.html', locals())
+                    return render(request, 'blue/register.html', locals())
                 # 当一切都OK时，创建新用户
                 new_user = models.User.objects.create()
                 new_user.mobile = mobile
@@ -108,14 +107,14 @@ def register(request):
                 new_user.tb = tb
 
                 new_user.save()
-                return redirect('/login/') #自动跳转到登陆页面
+                return redirect('login') #自动跳转到登陆页面
 
         else:
             return HttpResponse('dw')
 
     elif request.method == 'GET':
         register_form = RegisterForm()
-        return render(request, 'register.html', locals())
+        return render(request, 'blue/register.html', locals())
     else:
         return HttpResponse('method既不是POST也不是GET!')
 
@@ -123,22 +122,22 @@ def register(request):
 
 def logout(request):
     if not request.session.get('is_login',None):
-        return redirect('/login/')
+        return redirect('login')
     request.session.flush()
     return redirect('index')
 
 def base1(request):
-    return render(request,'base1.html')
+    return render(request,'blue/base1.html')
 
 def applied(request):
     pass
-    return render(request,'applied.html')
+    return render(request,'blue/applied.html')
 
 def user(request):
     #current_mobile = models.User.objects.filter(mobile=mobile)
     current_mobile = models.User.objects.get(mobile=request.session['user_mobile'])
 
-    return render(request, 'user.html',{'current_mobile':current_mobile})
+    return render(request,'blue/user.html',{'current_mobile':current_mobile})
 
 def info(request):
     current_mobile = models.User.objects.get(mobile=request.session['user_mobile'])
@@ -156,10 +155,10 @@ def info(request):
 
         current_mobile.save()
 
-        return render(request,'info.html',{'current_mobile':current_mobile})
+        return render(request,'blue/info.html',{'current_mobile':current_mobile})
 
     elif request.method == 'GET':
-        return render(request, 'info.html', {'current_mobile':current_mobile})
+        return render(request, 'blue/info.html', {'current_mobile':current_mobile})
     else:
         return HttpResponse('method既不是POST也不是GET!')
 
@@ -177,16 +176,16 @@ def setpassword(request):
                 current_mobile.save()
                 message = '设置成功'
                 state = 1 #1表示成功
-                return render(request, 'setpassward.html', locals())
+                return render(request, 'blue/setpassward.html', locals())
             else:
                 message = '两次输入的密码不一致，请重新输入'
                 state = 0 #0表示失败
-                return render(request,'setpassward.html',locals())
+                return render(request,'blue/setpassward.html',locals())
         else:
             message = '密码输入错误，请重新输入'
             state = 0
-            return render(request,'setpassward.html',locals())
+            return render(request,'blue/setpassward.html',locals())
 
 
     else:
-        return render(request,'setpassward.html')
+        return render(request,'blue/setpassward.html')

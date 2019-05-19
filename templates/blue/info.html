@@ -1,8 +1,8 @@
-{% extends 'base1.html' %}
+{% extends 'blue/base1.html' %}
 
 {% block content %}
     <div class="content p15">
-        <form action="/user/info" method="post">
+        <form action="blue/user/info" method="post">
             <div class="form-item">
                 <label class="form-label">真实姓名</label>
                 <input name="name" class="input-block readonly" type="text" name="name" placeholder="请输入真实姓名" xf-title="真实姓名不能为空" xf-verify="required" autocomplete="off" value="{{ current_mobile.name }}" disabled="disabled">
