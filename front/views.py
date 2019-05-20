@@ -42,7 +42,7 @@ def login(request):
                     request.session['user_mobile'] = user.mobile
                     request.session['user_name'] = user.name
                     request.session['password'] = user.password
-                    return redirect('blue/index/')
+                    return redirect('front:index')
                 else:
                     message = "密码不正确！"
             except:
@@ -59,10 +59,10 @@ def index(request):
         if request.session['is_login']:
             return render(request,'blue/index.html')
         else:
-            return redirect('login')
+            return redirect('front:login')
     else:
         request.session['is_login'] = False
-        return redirect('login')
+        return redirect('front:login')
 
 def register(request):
     if request.method == "POST":
@@ -107,7 +107,7 @@ def register(request):
                 new_user.tb = tb
 
                 new_user.save()
-                return redirect('login') #自动跳转到登陆页面
+                return redirect('front:login') #自动跳转到登陆页面
 
         else:
             return HttpResponse('dw')
@@ -122,9 +122,9 @@ def register(request):
 
 def logout(request):
     if not request.session.get('is_login',None):
-        return redirect('login')
+        return redirect('front:login')
     request.session.flush()
-    return redirect('index')
+    return redirect('front:index')
 
 def base1(request):
     return render(request,'blue/base1.html')
@@ -185,7 +185,5 @@ def setpassword(request):
             message = '密码输入错误，请重新输入'
             state = 0
             return render(request,'blue/setpassward.html',locals())
-
-
     else:
         return render(request,'blue/setpassward.html')
