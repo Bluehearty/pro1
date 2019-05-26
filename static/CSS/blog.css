@@ -26,3 +26,6 @@ ul.blog-info-description li{
 div.blog-more {
     margin-top: 1em;
 }
+.container {
+    margin-top: 70px!important;
+}
