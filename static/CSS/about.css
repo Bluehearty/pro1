@@ -2,11 +2,27 @@
     margin-top: 70px!important;
 }
 
-h3 {
+.about-me {
+    font-family: myFont;
+}
+
+.about-me h3 {
     margin-top: 2em;
     margin-bottom: 1.5em;
     font-weight: bolder;
+    font-size: 300%;
+
 }
-p {
+.about-me p {
     margin-bottom: 0.5em;
+    font-size: 200%;
+}
+.about-me p a{
+    font-size: 80%;
+}
+
+p.font-reference {
+    text-align: right;
+    margin-top: 2em;
+    padding-right: 2em;
 }
