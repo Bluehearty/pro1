@@ -1,11 +1,9 @@
 .container {
     margin-top: 70px!important;
 }
-
 .about-me {
-    font-family: myFont;
+    font-family:'sfjyankaiti19ae67c3951fa56';
 }
-
 .about-me h3 {
     margin-top: 2em;
     margin-bottom: 1.5em;
@@ -19,10 +17,4 @@
 }
 .about-me p a{
     font-size: 80%;
-}
-
-p.font-reference {
-    text-align: right;
-    margin-top: 2em;
-    padding-right: 2em;
 }
