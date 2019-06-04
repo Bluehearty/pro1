@@ -29,3 +29,10 @@ div.blog-more {
 .container {
     margin-top: 70px!important;
 }
+.blog-content ul {
+    padding: 0 1em;
+    list-style-type: inherit;
+}
+.blog-content h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}

@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 from django.conf import settings
 from django.db.models import Count
 from .models import Blog, BlogType
+import markdown
 
 def get_blog_list_common_data(request,blogs_all_list):
     paginator = Paginator(blogs_all_list,settings.EACH_PAGE_BLOGS_NUMBER)
@@ -56,7 +57,15 @@ def blog_list(request):
 
 
 def blog_detail(request,blog_pk):
-    blog = get_object_or_404(Blog, pk=blog_pk)
+    #blog = get_object_or_404(Blog, pk=blog_pk)
+    blog = Blog.objects.get(pk=blog_pk)
+    blog.content = markdown.markdown(blog.content,
+        extensions=[
+        # 包含 缩写、表格等常用扩展
+        'markdown.extensions.extra',
+        # 语法高亮扩展
+        'markdown.extensions.codehilite',
+        ])
     if not request.COOKIES.get('blog_%s_read' % blog_pk):
         blog.read_num += 1
         blog.save()
