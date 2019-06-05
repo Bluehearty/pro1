@@ -13,8 +13,8 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-xs-10 col-xs-offset-1">
-                <h3>{{ blog.title }}</h3>
+            <div class="col-xs-12">
+                <h1>{{ blog.title }}</h1>
                 <ul class="blog-info-description">
                     <li>作者：{{ blog.author }}</li>
                     <li>分类：<a href="{% url 'blog_category' blog.blog_type.pk %}">{{ blog.blog_type }}</a></li>
@@ -22,7 +22,15 @@
                     <li>阅读({{ blog.read_num }})</li>
                 </ul>
                 <div class="blog-content">{{ blog.content|safe }}</div>
-                <div class="blog-more">
+                <hr>
+                <div class="alert alert-success">
+                    <p>本文标题：{{ blog.title }}</p>
+                    <p>本文作者：{{ blog.author }}</p>
+                    <p>发布日期：{{ blog.c_time }}</p>
+                    <p>最近更新：{{ blog.up_time }}</p>
+                    <p>转载声明：原创内容，转载请注明原文及作者</p>
+                </div>
+                <hr>
                     <p>后一篇：
                         {% if previous_blog %}
                             <a href="{% url 'blog_detail' previous_blog.pk %}">{{ previous_blog.title }}</a>
