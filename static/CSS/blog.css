@@ -43,3 +43,8 @@ div.blog-more {
 .container h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
+.blog-content > p > img {
+    display: block;
+    max-width: 100% !important;
+    height: auto !important;
+}
