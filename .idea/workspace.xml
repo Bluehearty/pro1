@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aa9cadb-e6dc-46c7-85de-0ddf20f05274" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8d8460d-4600-41af-ad2c-a83158c1e1f7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8d8460d-4600-41af-ad2c-a83158c1e1f7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/CSS/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/CSS/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/0002_auto_20190604_1705.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/front/migrations/0001_initial.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +126,7 @@
     <session id="-522467905">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="44" />
+          <entry key="project.closed" value="46" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
@@ -136,31 +141,44 @@
           <entry key="project.open.time.23" value="4" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="47" />
+          <entry key="project.opened" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="blog_blog" value="6" />
+          <entry key="0blog_blog" value="1" />
+          <entry key="auth_permission" value="1" />
+          <entry key="auth_user" value="2" />
+          <entry key="auth_user_groups" value="2" />
+          <entry key="auth_user_user_permissions" value="1" />
+          <entry key="blog_blog" value="9" />
           <entry key="blog_blogtyepe" value="1" />
-          <entry key="blog_blogtype" value="2" />
+          <entry key="blog_blogtype" value="6" />
           <entry key="css" value="36" />
-          <entry key="front_user" value="6" />
+          <entry key="django_admin_log" value="1" />
+          <entry key="django_content_type" value="2" />
+          <entry key="django_migrations" value="3" />
+          <entry key="front_user" value="8" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="72" />
           <entry key="jpg" value="6" />
+          <entry key="js" value="1" />
           <entry key="md" value="2" />
-          <entry key="py" value="84" />
+          <entry key="png" value="1" />
+          <entry key="py" value="94" />
           <entry key="sql" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -168,12 +186,13 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="36" />
-          <entry key="Database Element" value="15" />
+          <entry key="Database Element" value="37" />
           <entry key="HTML" value="72" />
-          <entry key="Image" value="6" />
+          <entry key="Image" value="7" />
+          <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="84" />
+          <entry key="Python" value="94" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -182,7 +201,7 @@
           <entry key="css" value="1243" />
           <entry key="dummy" value="59" />
           <entry key="html" value="4714" />
-          <entry key="py" value="4327" />
+          <entry key="py" value="4531" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -190,93 +209,59 @@
           <entry key="CSS" value="1243" />
           <entry key="HTML" value="4714" />
           <entry key="PLAIN_TEXT" value="59" />
-          <entry key="Python" value="4327" />
+          <entry key="Python" value="4531" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="pro1" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro1/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-              <folding>
-                <element signature="e#628#660#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro1/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-              <folding>
-                <marker date="1559123886816" expanded="true" signature="115:120" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="140" selection-start-line="8" selection-start-column="140" selection-end-line="8" selection-end-column="140" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/blog/blog_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/blog/blog_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1265">
-              <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state relative-caret-position="-575">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro1/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="132" column="7" lean-forward="true" selection-start-line="132" selection-start-column="7" selection-end-line="132" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/JS/jquery-3.2.1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/CSS/blog.css">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/site-packages/django/contrib/admin/options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+            <state relative-caret-position="69">
+              <caret line="540" column="4" selection-start-line="540" selection-start-column="4" selection-end-line="540" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -323,7 +308,6 @@
         <option value="$PROJECT_DIR$/templates/blue/base1.html" />
         <option value="$PROJECT_DIR$/templates/blog/base.html" />
         <option value="$PROJECT_DIR$/blog/migrations/0001_initial.py" />
-        <option value="$PROJECT_DIR$/blog/admin.py" />
         <option value="$PROJECT_DIR$/../../sd/wangwangduo.py" />
         <option value="$PROJECT_DIR$/templates/blog_category.html" />
         <option value="$PROJECT_DIR$/blog/urls.py" />
@@ -334,7 +318,6 @@
         <option value="$PROJECT_DIR$/templates/blue/setpassward.html" />
         <option value="$PROJECT_DIR$/templates/blue/info.html" />
         <option value="$PROJECT_DIR$/front/views.py" />
-        <option value="$PROJECT_DIR$/pro1/settings.py" />
         <option value="$PROJECT_DIR$/static/CSS/index.css" />
         <option value="$PROJECT_DIR$/templates/blue/init.css" />
         <option value="$PROJECT_DIR$/static/CSS/init.css" />
@@ -351,11 +334,13 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/blog/views.py" />
         <option value="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/blog/models.py" />
         <option value="$PROJECT_DIR$/static/CSS/md_css/monokai.css" />
         <option value="$PROJECT_DIR$/templates/blog/blog_list.html" />
         <option value="$PROJECT_DIR$/templates/blog/blog_detail.html" />
         <option value="$PROJECT_DIR$/static/CSS/blog.css" />
+        <option value="$PROJECT_DIR$/blog/models.py" />
+        <option value="$PROJECT_DIR$/blog/admin.py" />
+        <option value="$PROJECT_DIR$/pro1/settings.py" />
       </list>
     </option>
   </component>
@@ -365,11 +350,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="325" />
-    <option name="y" value="189" />
-    <option name="width" value="1323" />
-    <option name="height" value="752" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="283" />
+    <option name="y" value="199" />
+    <option name="width" value="1404" />
+    <option name="height" value="759" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -377,6 +362,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -394,46 +380,10 @@
               <item name="pro1" type="462c0819:PsiDirectoryNode" />
               <item name="pro1" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pro1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pro1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-3.3.7-dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pro1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="CSS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pro1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="md_css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pro1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pro1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -621,59 +571,59 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="325" y="189" width="1323" height="752" extended-state="1" />
+    <frame x="283" y="199" width="1404" height="759" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49802372" visible="true" weight="0.31591448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49579832" visible="true" weight="0.20982143" />
       <window_info id="Structure" order="1" sideWeight="0.5019763" side_tool="true" weight="0.2444062" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.5042017" side_tool="true" weight="0.3013393" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32776934" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29821718" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32692307" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29647437" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32576984" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32371795" />
+      <window_info active="true" anchor="bottom" id="manage.py@pro1" order="7" visible="true" weight="0.19441572" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32371795" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32692307" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32901135" />
+      <window_info anchor="bottom" id="Python Console" order="14" weight="0.3258595" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32884902" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32961783" />
+      <window_info anchor="right" id="Database" order="4" weight="0.28199404" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49579832" visible="true" weight="0.20982143" />
+      <window_info id="Structure" order="1" sideWeight="0.5019763" side_tool="true" weight="0.2444062" />
+      <window_info id="Favorites" order="2" sideWeight="0.5042017" side_tool="true" weight="0.3013393" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32776934" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2972973" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3241491" />
       <window_info active="true" anchor="bottom" id="manage.py@pro1" order="7" visible="true" weight="0.19441572" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.3241491" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19773096" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32539684" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32931036" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32901135" />
       <window_info anchor="bottom" id="Python Console" order="14" weight="0.3258595" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32884902" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32961783" />
-      <window_info anchor="right" id="Database" order="4" weight="0.20369004" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49802372" visible="true" weight="0.28778282" />
-      <window_info id="Structure" order="1" sideWeight="0.5019763" side_tool="true" weight="0.2444062" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32776934" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21005917" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3258595" />
-      <window_info active="true" anchor="bottom" id="manage.py@pro1" order="7" visible="true" weight="0.19441572" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32735425" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.31988043" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32931036" />
-      <window_info anchor="bottom" id="Python Console" order="14" weight="0.3258595" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32884902" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32961783" />
-      <window_info anchor="right" id="Database" order="4" weight="0.20369004" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.28199404" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,113 +633,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../sd/wangwangduo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-415">
-          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/blog_blog">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog_category.html" />
-    <entry file="file://$PROJECT_DIR$/../../sd/mg.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/migrations/0002_auto_20190516_2356.py" />
-    <entry file="file://$PROJECT_DIR$/templates/blog/blog_category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blue/base1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="62" lean-forward="true" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blue/base2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/front_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blue/setpassward.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/blog_date.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blue/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="173" column="38" lean-forward="true" selection-start-line="173" selection-start-column="38" selection-end-line="173" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sd/kamengmao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/upload/2019/05/20/cat.jpg" />
     <entry file="file://$PROJECT_DIR$/media/upload/2019/05/21/dog.jpg" />
     <entry file="file://$PROJECT_DIR$/media/upload/2019/05/20/timg1.jpg" />
     <entry file="file://$PROJECT_DIR$/media/upload/2019/05/21/cat1.jpg" />
@@ -816,13 +659,6 @@
     <entry file="file://$PROJECT_DIR$/templates/test.html" />
     <entry file="file://$PROJECT_DIR$/static/CSS/blue.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro1/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -892,9 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding>
-            <element signature="e#628#660#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,16 +735,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <marker date="1559123886816" expanded="true" signature="115:120" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about.html">
+    <entry file="file://$PROJECT_DIR$/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="140" selection-start-line="8" selection-start-column="140" selection-end-line="8" selection-end-column="140" />
+        <state relative-caret-position="1265">
+          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/CSS/blog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -922,37 +759,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1265">
-          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="8" column="140" selection-start-line="8" selection-start-column="140" selection-end-line="8" selection-end-column="140" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/blog/migrations/0003_merge_20190606_2340.py" />
+    <entry file="file://$PROJECT_DIR$/blog/migrations/0002_auto_20190606_2336.py" />
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/auth_permission">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/blog/blog_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
+        <state relative-caret-position="92">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/CSS/blog.css">
+    <entry file="file://$PROJECT_DIR$/blog/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+        <state relative-caret-position="-483" />
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/auth_user_groups">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/auth_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/blog_blog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/django_migrations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/front_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/migrations/0002_imageupload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68" />
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/auth_user_user_permissions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/django_content_type">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/blog_blogtype">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/django_admin_log">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/article/20190607/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="das://e8d8460d-4600-41af-ad2c-a83158c1e1f7/schema/pro1/table/0blog_blog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/django/contrib/admin/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="540" column="4" selection-start-line="540" selection-start-column="4" selection-end-line="540" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/JS/jquery-3.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro1/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="132" column="7" lean-forward="true" selection-start-line="132" selection-start-column="7" selection-end-line="132" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-575">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="41" />
         </state>
       </provider>
     </entry>

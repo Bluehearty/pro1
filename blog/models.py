@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.html import format_html
 from ckeditor_uploader.fields import RichTextUploadingField
 
 class BlogType(models.Model):
@@ -23,3 +24,19 @@ class Blog(models.Model):
 
     class Meta:
         ordering = ['-c_time']
+
+class ImageUpload(models.Model):
+    name = models.CharField(max_length=15)
+    image = models.ImageField(upload_to='article/%Y%m%d/', blank=True)
+    c_time = models.DateTimeField(auto_now_add=True)
+
+    def image_data(self):
+        return format_html(
+            '<img src="{}" width="100px"/>',
+            self.image.url,
+        )
+
+    image_data.short_description = u'图片'
+
+    def __str__(self):
+        return self.name
