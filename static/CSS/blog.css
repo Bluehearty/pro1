@@ -1,5 +1,14 @@
-ul.blog-category {
-    list-style-type: none;
+.blog > p {
+    color: #8A8A8A;
+}
+.class-info > a {
+    color: #4D4D4D;
+}
+ul.blog-category > li > a {
+    color: #4D4D4D;
+}
+ul.blog-date > li > a {
+    color: #4D4D4D;
 }
 div.blog:not(:last-child){
     margin-bottom: 2em;
@@ -15,12 +24,17 @@ div.blog p.blog-info {
 div.paginator {
     text-align: center;
 }
+.pagination>.active_item>span:hover{
+    background-color: #4D4D4D!important;
+}
+
 .blog-title {
     font-weight: bold;
     margin-bottom: 0.5em;
 }
 .blog-title a{
     font-size: 120%;
+    color: #4D4D4D;
 }
 ul.blog-info-description {
     list-style-type: none;
