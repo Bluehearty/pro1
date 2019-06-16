@@ -39,6 +39,13 @@ div.paginator {
 ul.blog-info-description {
     list-style-type: none;
     margin-bottom: 1em;
+    border: solid;
+    border-width: thin;
+    border-radius: 10px;
+    padding: 5px 0.5em;
+    margin-top: 1em;
+    box-shadow: 0px 5px 5px #9FB6CD;
+    background: #B9D3EE;
 }
 ul.blog-info-description li{
     display: inline-block;
@@ -61,4 +68,9 @@ div.blog-more {
     display: block;
     max-width: 100% !important;
     height: auto !important;
+}
+.alert#alert1 {
+    color: #333;
+    background-color: #B9D3E8;
+    border-color: #999;
 }
