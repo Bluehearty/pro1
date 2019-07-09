@@ -17,7 +17,7 @@ class Blog(models.Model):
     author = models.ForeignKey(User,on_delete=models.DO_NOTHING)
     read_num = models.IntegerField(default=0)
     c_time = models.DateTimeField(auto_now_add=True)
-    up_time = models.DateTimeField(auto_now=True)
+    up_time = models.DateTimeField()
 
     def __str__(self):
         return "<title: %s>"%self.title
