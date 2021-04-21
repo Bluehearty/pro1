@@ -1,7 +1,0 @@
-{% extends 'blog/blog_list.html' %}
-{% block title %}{{ current_blog_data }}{% endblock %}
-
-{% block blog_list_title %}
-    时间分类:{{ current_blog_data }}——共有{{ page_of_blogs.paginator.count }}篇文章
-    <a href="{% url 'blog_list' %}">查看全部博客</a>
-{% endblock %}
