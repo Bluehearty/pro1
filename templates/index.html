@@ -13,7 +13,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="author" content="yuan25">
         <meta name="description" content="记录个人生活">
-		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" >
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css'%}" /></noscript>
 	</head>
 
@@ -80,24 +81,24 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form method="post" action="/blog/contact/">
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<label for="name">姓名</label>
+											<input type="text" name="name" id="name" placeholder="交流探讨技术请联系我！"/>
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<label for="email">联系方式</label>
+											<input type="text" name="email" id="email" placeholder="如：微信123456"/>
 										</div>
 										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<label for="message">留言内容</label>
+											<textarea name="message" id="message" rows="4" placeholder="提交成功后自动返回首页，我收到后会及时回复！"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<li><input type="submit" value="提交" class="primary" /></li>
+										<li><input type="reset" value="重置" /></li>
 									</ul>
 								</form>
 								<ul class="icons">
