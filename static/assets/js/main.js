@@ -295,7 +295,8 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							location.hash = '';
+						    location.href="http://"+window.location.host;
+							//location.hash = '';
 						});
 
 				// Prevent clicks from inside article from bubbling.
@@ -399,3 +400,4 @@
 					});
 
 })(jQuery);
+//(function($){...})(jQuery)是什么意思:https://blog.csdn.net/rambo_china/article/details/7742321

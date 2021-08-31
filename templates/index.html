@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE HTML>
 <!--
 	Dimension by HTML5 UP
@@ -17,7 +17,6 @@
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css'%}" /></noscript>
 	</head>
-
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -37,8 +36,8 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">博客</a></li>
-								<li><a href="#work">探索</a></li>
+								<li><a href="#blog">博客</a></li>
+								<li><a href="#explore">探索</a></li>
 								<li><a href="#about">关于</a></li>
 								<li><a href="#contact">联系</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
@@ -48,16 +47,62 @@
 
 				<!-- Main -->
 					<div id="main">
+                        <!-- Blog -->
+							<article id="blog">
+								<h2 class="major">Blog——只有{{ page_of_blogs.paginator.count }}篇文章了</h2>
+                                {% for blog in blogs %}
+                                    <br>
+                                    <a href="{% url 'detail' blog.pk %}#detail"><h2>{{ blog.title }}</h2></a>
+                                    <span class="fas fa-user">&nbsp;{{ blog.author }}</span>&nbsp;&nbsp;
+                                    <strong><span class="icon brands fa-telegram-plane">&nbsp;{{ blog.blog_type }}</span>&nbsp;&nbsp;</strong>
+                                    <span class="far fa-clock">&nbsp;{{ blog.c_time|date:"Y-m-d" }}</span>&nbsp;&nbsp;
+                                    <span class="fas fa-eye">&nbsp;{{ blog.read_num }}</span>&nbsp;&nbsp;
+                                    <span class="image main"><img src="{{ blog.cover }}" alt="" /></span>
+{#                                    <p class="image main">{{ blog.content|safe }}</p>#}
+                                    <p>{{ blog.content|striptags|truncatechars:120 }}</p>
+                                {% empty %}
+                                    <h3>出错啦~返回<a href="{% url 'index' %}">首页</a></h3>
+                                {% endfor %}
+                                <div style="text-align:center; font-size: 135%; text-decoration: none">
+                                        {# 上一页 #}
+                                            {% if page_of_blogs.has_previous %}
+                                                {# 屏幕阅读器阅读aria-label对应的值 #}
+                                                <a href="?page={{ page_of_blogs.previous_page_number }}#blog" aria-label="Previous">
+                                                    {# aria-hidden="true"时，屏幕阅读器会识别跳过有助阅读 #}
+                                                    <i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;
+                                                </a>
+                                            {% else %}
+                                                <i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;
+                                            {% endif %}
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Blog</h2>
-								<span class="image main"><img src="{% static 'images/pic01.jpg' %}" alt="" /></span>
-								<p>博客改版，内容正在迁移中...</p>
+                                        {# 全部页码 #}
+                                            {% for page_num in page_range %}
+                                                {% if page_num == page_of_blogs.number %}
+                                                    <span style="background-color: #4D4D4D;"><strong>{{ page_num }}</strong></span>&nbsp;&nbsp;
+                                                {% else %}
+                                                    {% if page_num == '...' %}
+                                                        <span><strong>{{ page_num }}</strong></span>&nbsp;&nbsp;
+                                                    {% else %}
+                                                        <a href="?page={{ page_num }}#blog"><strong>{{ page_num }}</strong></a>&nbsp;&nbsp;
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% endfor %}
+
+                                        {# 下一页 #}
+                                            {% if page_of_blogs.has_next %}
+                                                <a href="?page={{ page_of_blogs.next_page_number }}#blog" aria-label="Next">
+                                                    <i class="fas fa-angle-double-right"></i>
+                                                </a>
+                                            {% else %}
+                                                <i class="fas fa-angle-double-right"></i>
+                                            {% endif %}
+
+
+                                </div>
 							</article>
 
 						<!-- Work -->
-							<article id="work">
+							<article id="explore">
 								<h2 class="major">Explore</h2>
 								<span class="image main"><img src="{% static 'images/pic02.jpg' %}" alt="" /></span>
 								<p>开发中...</p>
@@ -70,7 +115,8 @@
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="{% static 'images/pic03.jpg' %}" alt="" /></span>
                                 <p>一个编程爱好者，爱幻想，也有自己的想法，经常有小灯泡出现 <br>
-                                    目前大四，坐标山城，现就读于重庆一高校。<br>
+                                    目前就读于长三角地区某211高校计算机专硕<br>
+                                    精通 C、C++、Java、Python等单词的拼写<br>
                                     如果你也爱幻想，想要一起分享、探讨技术，欢迎联系我：微信：yuanjieCF
                                 </p>
                                 <p>以下也是我所在的平台：<br>
@@ -83,7 +129,7 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="/blog/contact/">
+								<form method="post" action="contact/">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">姓名</label>
@@ -119,6 +165,20 @@
                                 <img src="http://image.yuan25.cn/weixin.JPG" class="image main">
 
 							</article>
+                    
+                        <!-- detail -->
+                            <article id="detail">
+                                <h2 class="major">全文如下</h2>
+
+                                <h2>{{ blog.title }}</h2>
+                                <span class="fas fa-user">&nbsp;{{ blog.author }}</span>&nbsp;&nbsp;
+                                <strong><span class="icon brands fa-telegram-plane">&nbsp;{{ blog.blog_type }}</span>&nbsp;&nbsp;</strong>
+                                <span class="far fa-clock">&nbsp;{{ blog.c_time|date:"Y-m-d" }}</span>&nbsp;&nbsp;
+                                <span class="fas fa-eye">&nbsp;{{ blog.read_num }}</span>&nbsp;&nbsp;
+                                <span class="image main"><img src="{{ blog.cover }}" alt="" /></span>
+                                <p>{{ blog.content|safe }}</p>
+
+                            </article>
 
 						<!-- Elements -->
 							<article id="elements">
@@ -380,7 +440,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
 			<script src="{% static 'assets/js/util.js' %}"></script>
 			<script src="{% static 'assets/js/main.js' %}"></script>
-
-
-	</body>
+            <script>
+                var div = document.getElementsByTagName("img");
+                for (var i=0;i<div.length;i++) {
+                    div[i].setAttribute("class", "image main");
+                }
+            </script>
+    </body>
 </html>
