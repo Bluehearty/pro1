@@ -13,22 +13,29 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('oldblog/', include('oldblog.urls'))
 """
-
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from . import views
-from blog import views
+# from . import views
+from blog import views as blog_view
+from chongqing import views as cq_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.blog_list, name='index'),
-    path('detail/<int:blog_pk>', views.blog_detail, name='detail'),
-    path('#blog', views.blog_list, name='blog'),
-    path('contact/', views.message, name="contact"),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('', blog_view.blog_list, name='index'),
+    path('detail/<int:blog_pk>', blog_view.blog_detail, name='detail'),
+    path('#blog', blog_view.blog_list, name='blog'),
+    # path('contact/', views.message, name="contact"),
+    # path('ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'mdeditor/', include('mdeditor.urls')),
+    path('chongqing/', cq_views.cq_index, name='cq_index'),
 
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+   #static files (images,css,javascript, etc.)
+   urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

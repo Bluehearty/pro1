@@ -62,7 +62,10 @@ def blog_list(request):
 def blog_detail(request, blog_pk):
     #blog = get_object_or_404(Blog, pk=blog_pk)
     blog = Blog.objects.get(pk=blog_pk)
-    blog.content = markdown.markdown(blog.content,
+    if not request.COOKIES.get('blog_%s_read' % blog_pk):
+        blog.read_num += 1
+        blog.save()
+    blog.content = markdown.markdown(blog.content.replace("\r\n", '\n'),
         extensions=[
             # 包含 缩写、表格等常用扩展
             'markdown.extensions.extra',
@@ -70,9 +73,6 @@ def blog_detail(request, blog_pk):
             'markdown.extensions.codehilite',
         ]
     )
-    if not request.COOKIES.get('blog_%s_read' % blog_pk):
-        blog.read_num += 1
-        blog.save()
     context = {
         'previous_blog': Blog.objects.filter(c_time__gt=blog.c_time).last(),
         'next_blog': Blog.objects.filter(c_time__lt=blog.c_time).first(),

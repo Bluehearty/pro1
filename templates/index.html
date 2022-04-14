@@ -15,7 +15,7 @@
         <meta name="description" content="记录个人生活">
         <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" >
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
-		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css'%}" /></noscript>
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -105,8 +105,10 @@
 							<article id="explore">
 								<h2 class="major">Explore</h2>
 								<span class="image main"><img src="{% static 'images/pic02.jpg' %}" alt="" /></span>
-								<p>开发中...</p>
-                                <p>以后会放一些创造性的内容...</p>
+                                <p>
+                                    <a href="{% url 'cq_index' %}"><img src="{% static 'chongqing/images/scws4.png' %}" style="width: 46%;float:left;"></a>
+                                    <a href="{% url 'cq_index' %}"><img src="{% static 'chongqing/images/scws4.png' %}" style="width: 46%;float:right;"></a>
+                                </p>
 
 							</article>
 
