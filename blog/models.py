@@ -32,7 +32,7 @@ class Blog(models.Model):
     author = models.ForeignKey(User,on_delete=models.DO_NOTHING)
     read_num = models.IntegerField(default=0)
     c_time = models.DateTimeField(auto_now_add=True)
-    up_time = models.DateTimeField()
+    up_time = models.DateTimeField(auto_now=True)
     cover = models.CharField(max_length=150)
 
     def __str__(self):

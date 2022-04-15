@@ -71,6 +71,8 @@ def blog_detail(request, blog_pk):
             'markdown.extensions.extra',
             # 语法高亮扩展
             'markdown.extensions.codehilite',
+            # 用于生成目录
+            'markdown.extensions.toc',
         ]
     )
     context = {

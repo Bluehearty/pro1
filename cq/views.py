@@ -4,5 +4,5 @@ from django.shortcuts import render
 
 def cq_index(request):
 
-    return render(request, 'chongqing/index.html')
+    return render(request, 'cq/index.html')
 

@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 # from . import views
 from blog import views as blog_view
-from chongqing import views as cq_views
+from cq import views as cq_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,8 +30,7 @@ urlpatterns = [
     # path('contact/', views.message, name="contact"),
     # path('ckeditor/', include('ckeditor_uploader.urls')),
     url(r'mdeditor/', include('mdeditor.urls')),
-    path('chongqing/', cq_views.cq_index, name='cq_index'),
-
+    path('cq/', cq_views.cq_index, name='cq_index'),
 ]
 
 if settings.DEBUG:
